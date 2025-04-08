@@ -1,51 +1,50 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
-    <title>�aƷӆُ��</title>
+    <title>產品訂購單</title>
 </head>
 
 <body class="bg-gray-100 font-sans">
     <div class="container mx-auto p-8">
-        <h1 class="text-3xl font-bold mb-6">�aƷӆُ��</h1>
+        <h1 class="text-3xl font-bold mb-6">產品訂購單</h1>
         <form id="orderForm" class="bg-white p-6 rounded shadow-md">
-            <!-- ������Ϣ -->
-            <h2 class="text-xl font-bold mb-4">������Ϣ</h2>
+            <!-- 基本信息 -->
+            <h2 class="text-xl font-bold mb-4">基本信息</h2>
             <div class="mb-4">
-                <label for="name" class="block text-gray-700 text-sm font-bold mb-2">����</label>
+                <label for="name" class="block text-gray-700 text-sm font-bold mb-2">姓名</label>
                 <input type="text" id="name" required class="border border-gray-300 p-2 w-full">
             </div>
             <div class="mb-4">
-                <label for="phone" class="block text-gray-700 text-sm font-bold mb-2">�֙C�j�Ԓ</label>
+                <label for="phone" class="block text-gray-700 text-sm font-bold mb-2">手機聯絡電話</label>
                 <input type="tel" id="phone" required class="border border-gray-300 p-2 w-full">
             </div>
             <div class="mb-4">
-                <label for="address" class="block text-gray-700 text-sm font-bold mb-2">�]�ĵ�ַ(�����̵��ַ�����)</label>
+                <label for="address" class="block text-gray-700 text-sm font-bold mb-2">郵寄地址(便利商店地址或店名)</label>
                 <input type="text" id="address" required class="border border-gray-300 p-2 w-full">
             </div>
 
-            <!-- ��Ʒѡ�� -->
-            <h2 class="text-xl font-bold mb-4">�aƷ�x��</h2>
+            <!-- 产品选择 -->
+            <h2 class="text-xl font-bold mb-4">產品選擇</h2>
             <table class="w-full border-collapse">
                 <thead>
                     <tr>
-                        <th class="border p-2">�aƷ���Q</th>
-                        <th class="border p-2">��λ</th>
-                        <th class="border p-2">���ۃr</th>
-                        <th class="border p-2">���T�r</th>
-                        <th class="border p-2">VIP�r</th>
-                        <th class="border p-2">����</th>
-                        <th class="border p-2">���СӋ</th>
+                        <th class="border p-2">產品名稱</th>
+                        <th class="border p-2">單位</th>
+                        <th class="border p-2">零售價</th>
+                        <th class="border p-2">會員價</th>
+                        <th class="border p-2">VIP價</th>
+                        <th class="border p-2">數量</th>
+                        <th class="border p-2">單項小計</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="border p-2">������</td>
-                        <td class="border p-2">��</td>
+                        <td class="border p-2">創生肽</td>
+                        <td class="border p-2">盒</td>
                         <td class="border p-2">NT$1680</td>
                         <td class="border p-2">NT$1200</td>
                         <td class="border p-2">NT$1000</td>
@@ -54,8 +53,8 @@
                         <td class="border p-2" id="subtotal1">NT$0</td>
                     </tr>
                     <tr>
-                        <td class="border p-2">�_���Ͼ�������</td>
-                        <td class="border p-2">��</td>
+                        <td class="border p-2">羅伊氏菌益生菌</td>
+                        <td class="border p-2">盒</td>
                         <td class="border p-2">NT$680</td>
                         <td class="border p-2">NT$600</td>
                         <td class="border p-2">NT$580</td>
@@ -64,8 +63,8 @@
                         <td class="border p-2" id="subtotal2">NT$0</td>
                     </tr>
                     <tr>
-                        <td class="border p-2">��ľ��۔������</td>
-                        <td class="border p-2">��</td>
+                        <td class="border p-2">辣木奇蹟酵素碇</td>
+                        <td class="border p-2">罐</td>
                         <td class="border p-2">NT$680</td>
                         <td class="border p-2">NT$600</td>
                         <td class="border p-2">NT$580</td>
@@ -74,8 +73,8 @@
                         <td class="border p-2" id="subtotal3">NT$0</td>
                     </tr>
                     <tr>
-                        <td class="border p-2">�Ą���һ������</td>
-                        <td class="border p-2">ƿ</td>
+                        <td class="border p-2">心動力一氧化氮</td>
+                        <td class="border p-2">瓶</td>
                         <td class="border p-2">NT$1280</td>
                         <td class="border p-2">NT$980</td>
                         <td class="border p-2">NT$800</td>
@@ -86,26 +85,26 @@
                 </tbody>
             </table>
 
-            <!-- �ܼ� -->
+            <!-- 总价 -->
             <div class="mb-4">
-                <label for="totalPrice" class="block text-gray-700 text-sm font-bold mb-2">���r</label>
+                <label for="totalPrice" class="block text-gray-700 text-sm font-bold mb-2">總價</label>
                 <span id="totalPrice">NT$0</span>
             </div>
 
-            <!-- ���ʽ -->
+            <!-- 付款方式 -->
             <div class="mb-4">
-                <label for="paymentMethod" class="block text-gray-700 text-sm font-bold mb-2">���ʽ</label>
+                <label for="paymentMethod" class="block text-gray-700 text-sm font-bold mb-2">付款方式</label>
                 <select id="paymentMethod" class="border border-gray-300 p-2 w-full">
-                    <option value="creditCard">���ÿ�</option>
-                    <option value="bankTransfer">�R��</option>
+                    <option value="creditCard">信用卡</option>
+                    <option value="bankTransfer">匯款</option>
                 </select>
             </div>
             <div id="bankAccountDiv" class="mb-4 hidden">
-                <label for="bankAccount" class="block text-gray-700 text-sm font-bold mb-2">�R�̖ĩ�Ĵa</label>
+                <label for="bankAccount" class="block text-gray-700 text-sm font-bold mb-2">匯款帳號末四碼</label>
                 <input type="text" id="bankAccount" class="border border-gray-300 p-2 w-full">
             </div>
 
-            <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">�ύӆ��</button>
+            <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">提交訂單</button>
         </form>
     </div>
     <script>
@@ -205,7 +204,7 @@
                 bankAccount
             };
 
-            // �뽫�����滻Ϊ��ʵ�ʵĺ�˷�������ַ
+            // 请将这里替换为你实际的后端服务器地址
             const backendUrl = 'http://your-backend-server-ip:5000/submit_order';
             fetch(backendUrl, {
                 method: 'POST',
@@ -219,7 +218,7 @@
                     alert(result.message);
                 })
               .catch(error => {
-                    alert('�ύ����ʱ���ִ���');
+                    alert('提交订单时出现错误');
                 });
         });
     </script>
