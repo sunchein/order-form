@@ -205,7 +205,7 @@
             };
 
             // 请将这里替换为你实际的后端服务器地址
-            const backendUrl = 'http://58.114.158.168:5000/submit_order';
+            const backendUrl = 'http://58.114.158.168:8080/submit_order';
             fetch(backendUrl, {
                 method: 'POST',
                 headers: {
@@ -218,7 +218,7 @@
                     alert(result.message);
                 })
               .catch(error => {
-                    alert('提交订单时出现错误');
+                    alert('提交訂單時出現錯誤');
                 });
         });
     </script>
